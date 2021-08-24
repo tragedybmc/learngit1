@@ -1,0 +1,11 @@
+from lxml import etree
+
+html = etree.parse('test1.html',etree.HTMLParser())
+result = etree.tostring(html)
+print(result.decode('utf-8'))
+'''
+#html = etree.parse('./test.html',etree.HTMLParser())
+html = etree.parse('test1.html')
+result = html.xpath("/div/div[2]/ul/li/a")
+print(len(result))
+'''
